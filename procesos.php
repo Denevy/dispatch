@@ -1,6 +1,8 @@
 <?php
-  include('class/session.php');
   include('class/Planificacion.php');
+  //include('class/conexion.php');
+ // $conectar = new conexion;
+  //$conectar->conexion();
   $clase = new Planificacion;
  ?>
 <!DOCTYPE html>
@@ -81,69 +83,18 @@
     <!--breadcrumbs end-->
 <section id="main-content">
           <section class="wrapper">
-          
-             <div class="row">
-                 <div class="col-lg-12">
-                     <!--testimonial start-->
-                     <div class="about-testimonial boxed-style about-flexslider ">
-<!--                         <section class="panel">
-                          <header class="panel-heading">
-                             <h4>Datos</h4> 
-                          </header>
-                          <div class="panel-body">
-                              <form class="form-group" method="POST" action="info.php">
-                                      <div class="col-lg-3">
-                                          <input type="text" class="form-control" placeholder="Cantidad de Procesos" id="CantidadProceso" name="parametros[]">
-                                      </div>
-                                      <div class="col-lg-3">
-                                          <input type="text" class="form-control" placeholder="Quantum" id="Quantum" name="parametros[]">
-                                      </div>
-                                      <button type="submit" class="btn btn-danger">Definir</button>
-                              </form>
-                          </div>
-                          <div class="panel-body">
-                              <form class="form-group" method="POST" action="info.php">
-                                      <div class="col-lg-3">
-                                          <input type="text" class="form-control" placeholder="Tiempo de Llegada" id="TiempoLlegada" name="proceso[]">
-                                      </div>
-                                      <div class="col-lg-3">
-                                          <input type="text" class="form-control" placeholder="Rafaga" id="Rafaga" name="proceso[]">
-                                      </div>
-                                      <button type="submit" class="btn btn-success">Agregar Datos</button>
-                              </form>
-                          </div>
-                      </section> -->
-                     </div>
-                     <!--testimonial end-->
-                 </div>
-             </div>
-
-             <input type="button" value="Generar Planificación" id="generar" class="btn btn-danger"/>
-             
+             <input type="button" value="Generar Planificación" id="generar" class="btn btn-success"/>
+             <input type="button" value="Borrar Datos" id="borrar" class="btn btn-danger"/>
              <div class="row">
                <div class="col-lg-12">
                  <section class="panel" id='tablaProcesos'>
                           
                           <header class="panel-heading">
-                              Tabla de Procesos
+                             <h1> Tabla FCFS </h1>
                           </header>
-                          <table class="table table-striped table-advance table-hover">
-                              <thead>
-                              <tr>
-                                  <th><i class="icon-bullhorn"></i> Proceso</th>
-                                  <th class="hidden-phone"><i class="icon-question-sign"></i> Llegada</th>
-                                  <th><i class="icon-bookmark"></i> Rafaga</th>
-                                  <th><i class=" icon-edit"></i> Tiempo de Retorno</th>
-                                  <th><i class=" icon-edit"></i> Tiempo de Espera</th>
-                                  <th></th>
-                              </tr>
-                              </thead>
-                              <tbody>
                               <?php 
-                                $clase->MostrarTabla();
+                                $clase->MostrarTablaFcfs();
                                ?> 
-                              </tbody>
-                          </table>
                       </section>
                </div>
              </div>

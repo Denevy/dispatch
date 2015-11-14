@@ -1,15 +1,16 @@
 <?php 
-session_start();
-	//contador recibe la cantidad de procesos que se registran
-	//$contar= $_GET['contador'];
-	$datos=$_POST['proceso'];
-	$_SESSION['arrayProcesos']=$datos;
-	//var_dump($datos);
-	$proceso=explode(',',$datos);
-	//var_dump($proceso);
-	$cantidad=count($proceso);
-	//echo 'cantidad de procesos:  '.$cantidad;
-	var_dump($_SESSION['arrayProcesos']);
+	include('conexion.php');
+	$conexion = new conexion;
+	$conexion->conexion();
+
+	$tiempoLlegada	= $_GET['Llegada'];
+	$rafaga 		= $_GET['Rafaga'];
+
+	mysql_query("INSERT INTO Proceso (llegada ,rafaga) 
+					VALUES('$tiempoLlegada','$rafaga')");
+
+	//mostrar los procesos registrados
+	$procesos 	= mysql_query("SELECT * FROM Proceso");
 	echo '<table class="table table-striped table-advance table-hover">
 	          <thead>
 		          <tr>
@@ -19,16 +20,15 @@ session_start();
 		          </tr>
 	          </thead>
 	          <tbody>';
-    $i=0;
-
-	for ($i; $i <$cantidad ; $i++) { 
-		echo '<tr>';
-		echo'<td>'.$proceso[$i].'</td>';	
-		$i=$i+1;
-		echo'<td>'.$proceso[$i].'</td>';	
-		$i=$i+1;
-		echo'<td>'.$proceso[$i].'</td></tr>';					
+	while($mostrar = mysql_fetch_array($procesos))
+	{
+		echo '<tr>
+			  	<td>'.$mostrar['idProceso'].'</td>';
+		  echo '<td>'.$mostrar['llegada'].'</td>';
+		  echo '<td>'.$mostrar['rafaga'].'</td> 
+			  </tr>';
 	}
-	echo '</tbody>
-          </table>';
+		echo '
+			</tbody>
+        </table>';
 ?>	
