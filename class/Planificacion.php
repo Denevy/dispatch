@@ -4,19 +4,38 @@
 
     function MostrarTabla()
     {
-      $restricciones = $_SESSION['restriciones'];
-      echo $restricciones;
-      echo "<tr>
-                                  <td><a>Vector Ltd</a></td>
-                                  <td class=\"hidden-phone\">Lorem Ipsum dorolo imit</td>
-                                  <td>12120.00$ </td>
-                                  <td><span class=\"label label-info label-mini\">Due</span></td>
-                                  <td>
-                                      <button class=\"btn btn-success btn-xs\"><i class=\"icon-ok\"></i></button>
-                                      <button class=\"btn btn-primary btn-xs\"><i class=\"icon-pencil\"></i></button>
-                                      <button class=\"btn btn-danger btn-xs\"><i class=\"icon-trash\"></i></button>
-                                  </td>
-                              </tr>";
+      //$restricciones = $_SESSION['restriciones'];
+      session_start();
+      $datos=$_SESSION['arrayProcesos'];
+      //var_dump($procesos);
+      //echo $restricciones;
+  
+      $proceso=explode(',',$datos);
+      //var_dump($proceso);
+      $cantidad=count($proceso);
+      //echo 'cantidad de procesos:  '.$cantidad;
+      var_dump($_SESSION['arrayProcesos']);
+      echo '<table class="table table-striped table-advance table-hover">
+                <thead>
+                  <tr>
+                      <th>Número</th>
+                      <th>Llegada</th>
+                      <th>Rafaga</th>
+                  </tr>
+                </thead>
+                <tbody>';
+        $i=0;
+
+      for ($i; $i <$cantidad ; $i++) { 
+        echo '<tr>';
+        echo'<td>'.$proceso[$i].'</td>';  
+        $i=$i+1;
+        echo'<td>'.$proceso[$i].'</td>';  
+        $i=$i+1;
+        echo'<td>'.$proceso[$i].'</td></tr>';         
+      }
+      echo '</tbody>
+              </table>';                              
 		}
 	}
  ?>

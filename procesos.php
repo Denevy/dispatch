@@ -1,4 +1,5 @@
-<?php 
+<?php
+  include('class/session.php');
   include('class/Planificacion.php');
   $clase = new Planificacion;
  ?>
@@ -121,7 +122,7 @@
              
              <div class="row">
                <div class="col-lg-12">
-                 <section class="panel">
+                 <section class="panel" id='tablaProcesos'>
                           
                           <header class="panel-heading">
                               Tabla de Procesos
