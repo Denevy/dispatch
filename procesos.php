@@ -95,6 +95,18 @@
                               <?php 
                                 $clase->MostrarTablaFcfs();
                                ?> 
+                          <header class="panel-heading">
+                             <h1> Tabla SJF Apropiativo </h1>
+                          </header>
+                              <?php 
+                                $clase->MostrarTablaSjf();
+                               ?>
+                          <header class="panel-heading">
+                             <h1> Tabla SJF No Apropiativo </h1>
+                          </header>
+                              <?php 
+                                $clase->MostrarTablaNoSjf();
+                               ?> 
                       </section>
                </div>
              </div>
