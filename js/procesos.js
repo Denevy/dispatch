@@ -36,7 +36,7 @@ var contador=0; //Contador de Registro de procesos
 					success: function(data){
 					//alert(cantProcesos);
 					//alert(quantum);
-						alert(data);
+						//alert(data);
 						if(data == 'cargo'){
 							//alert('si mando datos');
 							$('#tiempoLlegada').removeAttr('disabled').focus();
@@ -70,9 +70,9 @@ var contador=0; //Contador de Registro de procesos
 					type: 'GET',
 					url: 'class/IngresarProceso.php?Llegada='+tiempoLlegada+'&Rafaga='+rafaga,
 					success: function(data){
-						alert(tiempoLlegada);
-						alert(rafaga);
-						alert(data);
+						//alert(tiempoLlegada);
+						//alert(rafaga);
+						//alert(data);
 						//document.getElementById('tablaProcesos').style.display = 'block';
 						$('#tiempoLlegada').val('').focus();
 						$('#rafaga').val('');

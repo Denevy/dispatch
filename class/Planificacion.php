@@ -75,6 +75,7 @@ class Planificacion{
         //echo $tempEspera;
         echo'   <td>'.$espera.'</td>';
       }
+        if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
         $temp+=$porcentaje[$contador];
         //echo $porcentaje[$contador];
@@ -84,12 +85,14 @@ class Planificacion{
                     </div>
                   </div>
               </td>';
+          }
         echo'
             </tr>';
 
     $contador2++;  
     $contador++;  
     }
+      if($TiempoTotal > 0){
       $promedioRafaga=$tempRafaga/$tempTotal;
       $promedioEspera=$tempEspera/$tempTotal;
         echo '<tr>
@@ -98,6 +101,7 @@ class Planificacion{
                 <td>'.number_format($promedioRafaga,2).'</td>
                 <td>'.number_format($promedioEspera,2).'</td>
               </tr>';
+      }
       echo '
         </tbody>
           </table>';
@@ -175,6 +179,7 @@ class Planificacion{
         //echo $tempEspera;
         echo'   <td>'.$espera.'</td>';
       }
+        if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
         $temp+=$porcentaje[$contador];
         //echo $porcentaje[$contador];
@@ -184,12 +189,14 @@ class Planificacion{
                     </div>
                   </div>
               </td>';
+        }
         echo'
             </tr>';
 
     $contador2++;  
     $contador++;  
     }
+    if($TiempoTotal>0){
       $promedioRafaga=$tempRafaga/$tempTotal;
       $promedioEspera=$tempEspera/$tempTotal;
         echo '<tr>
@@ -198,6 +205,7 @@ class Planificacion{
                 <td>'.number_format($promedioRafaga,2).'</td>
                 <td>'.number_format($promedioEspera,2).'</td>
               </tr>';
+      }
       echo '
         </tbody>
           </table>';
@@ -275,6 +283,7 @@ class Planificacion{
         //echo $tempEspera;
         echo'   <td>'.$espera.'</td>';
       }
+        if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
         $temp+=$porcentaje[$contador];
         //echo $porcentaje[$contador];
@@ -284,12 +293,14 @@ class Planificacion{
                     </div>
                   </div>
               </td>';
+              }
         echo'
             </tr>';
 
     $contador2++;  
     $contador++;  
     }
+      if($TiempoTotal >0){
       $promedioRafaga=$tempRafaga/$tempTotal;
       $promedioEspera=$tempEspera/$tempTotal;
         echo '<tr>
@@ -298,6 +309,7 @@ class Planificacion{
                 <td>'.number_format($promedioRafaga,2).'</td>
                 <td>'.number_format($promedioEspera,2).'</td>
               </tr>';
+              }
       echo '
         </tbody>
           </table>';

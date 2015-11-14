@@ -56,7 +56,6 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="about.html">Información</a></li>
                         <li class="active"><a href="procesos.php">Planificación de Procesos</a></li>
                         <li><input type="text" placeholder=" Search" class="form-control search"></li>
                     </ul>
@@ -84,7 +83,7 @@
 <section id="main-content">
           <section class="wrapper">
              <input type="button" value="Generar Planificación" id="generar" class="btn btn-success"/>
-             <input type="button" value="Borrar Datos" id="borrar" class="btn btn-danger"/>
+             <a type="button" href="class/borrar.php" value="Borrar Datos" id="borrar" class="btn btn-danger"/>Borrar</a>
              <div class="row">
                <div class="col-lg-12">
                  <section class="panel" id='tablaProcesos'>
