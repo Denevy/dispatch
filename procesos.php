@@ -82,8 +82,8 @@
     <!--breadcrumbs end-->
 <section id="main-content">
           <section class="wrapper">
-             <input type="button" value="Generar Planificación" id="generar" class="btn btn-success"/>
-             <a type="button" href="class/borrar.php" value="Borrar Datos" id="borrar" class="btn btn-danger"/>Borrar</a>
+             <a type="button" value="Generar Planificación" id="generar" class="icon-file-text-alt btn btn-success"> Generar Planificación </a>
+             <a type="button" href="class/borrar.php" value="Borrar Datos" id="borrar" class="icon-eraser btn btn-danger"> Borrar</a>
              <div class="row">
                <div class="col-lg-12">
                  <section class="panel" id='tablaProcesos'>
@@ -131,7 +131,7 @@
                         <td><input type="text" class="form-control" id="quantum" maxlength="5"/></td>
                     </tr>
                     <tr>
-                      <td colspan="4"><input type="button" id="definirRestricciones" class="btn btn-danger" value="Definir" /></td>
+                      <td colspan="4"><a type="button" id="definirRestricciones" class="icon-code-fork btn btn-danger" value="Definir" > Definir</a></td>
                     </tr>
                 </table>
                 </fieldset>
@@ -148,7 +148,7 @@
                 <br />
                 <div id="contenidoRegistro"></div>
                 <div class="modal-footer">
-                  <input type="button" id="guardar" class="btn btn-info" value="Guardar"/>
+                  <a type="button" id="guardar" class="icon-save btn btn-info" value="Guardar"> Guardar</a>
                 </div>
               </div>
           </div>

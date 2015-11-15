@@ -43,7 +43,7 @@ class Planificacion{
       echo '<tr>
               <td>P'.$mostrar['idProceso'].'</td>
               <td>'.$mostrar['llegada'].'</td>
-              <td>'.$mostrar['rafaga'].'</td>';
+              <td>'.$mostrar['rafaga'].' mseg</td>';
       $rafaga[$contador]=$mostrar['rafaga'];
       $total=count($rafaga);
       $tempTotal=$total;
@@ -51,9 +51,9 @@ class Planificacion{
       if($total == 1)
       {
         //echo "entro al if";
-        echo '<td>'.$mostrar['rafaga'].'</td>';
+        echo '<td>'.$mostrar['rafaga'].' mseg</td>';
         $espera= ($mostrar['rafaga']-$mostrar['rafaga']);
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
       else
       {
@@ -65,7 +65,7 @@ class Planificacion{
         $tempRafaga=$totalRafaga;
         //echo $totalRafaga;
         $retorno[$contador2]=($totalRafaga-$mostrar['llegada']);
-        echo'   <td>'.$retorno[$contador2].'</td>';
+        echo'   <td>'.$retorno[$contador2].' mseg</td>';
 
         $espera= ($retorno[$contador2]-$mostrar['rafaga']);
         $esperaArray[$contador2]=$espera;
@@ -73,7 +73,7 @@ class Planificacion{
         $totalEspera+=$espera;
         $tempEspera=$totalEspera;
         //echo $tempEspera;
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
         if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
@@ -98,8 +98,8 @@ class Planificacion{
         echo '<tr>
                 <td>Promedio</td>
                 <td><td>
-                <td>'.number_format($promedioRafaga,2).'</td>
-                <td>'.number_format($promedioEspera,2).'</td>
+                <td>'.number_format($promedioRafaga,2).' mseg</td>
+                <td>'.number_format($promedioEspera,2).' mseg</td>
               </tr>';
       }
       echo '
@@ -147,7 +147,7 @@ class Planificacion{
       echo '<tr>
               <td>P'.$mostrar['idProceso'].'</td>
               <td>'.$mostrar['llegada'].'</td>
-              <td>'.$mostrar['rafaga'].'</td>';
+              <td>'.$mostrar['rafaga'].' mseg</td>';
       $rafaga[$contador]=$mostrar['rafaga'];
       $total=count($rafaga);
       $tempTotal=$total;
@@ -155,9 +155,9 @@ class Planificacion{
       if($total == 1)
       {
         //echo "entro al if";
-        echo '<td>'.$mostrar['rafaga'].'</td>';
+        echo '<td>'.$mostrar['rafaga'].' mseg</td>';
         $espera= ($mostrar['rafaga']-$mostrar['rafaga']);
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
       else
       {
@@ -169,7 +169,7 @@ class Planificacion{
         $tempRafaga=$totalRafaga;
         //echo $totalRafaga;
         $retorno[$contador2]=($totalRafaga-$mostrar['llegada']);
-        echo'   <td>'.$retorno[$contador2].'</td>';
+        echo'   <td>'.$retorno[$contador2].' mseg</td>';
 
         $espera= ($retorno[$contador2]-$mostrar['rafaga']);
         $esperaArray[$contador2]=$espera;
@@ -177,7 +177,7 @@ class Planificacion{
         $totalEspera+=$espera;
         $tempEspera=$totalEspera;
         //echo $tempEspera;
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
         if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
@@ -202,8 +202,8 @@ class Planificacion{
         echo '<tr>
                 <td>Promedio</td>
                 <td><td>
-                <td>'.number_format($promedioRafaga,2).'</td>
-                <td>'.number_format($promedioEspera,2).'</td>
+                <td>'.number_format($promedioRafaga,2).' mseg</td>
+                <td>'.number_format($promedioEspera,2).' mseg</td>
               </tr>';
       }
       echo '
@@ -251,7 +251,7 @@ class Planificacion{
       echo '<tr>
               <td>P'.$mostrar['idProceso'].'</td>
               <td>'.$mostrar['llegada'].'</td>
-              <td>'.$mostrar['rafaga'].'</td>';
+              <td>'.$mostrar['rafaga'].' mseg</td>';
       $rafaga[$contador]=$mostrar['rafaga'];
       $total=count($rafaga);
       $tempTotal=$total;
@@ -259,9 +259,9 @@ class Planificacion{
       if($total == 1)
       {
         //echo "entro al if";
-        echo '<td>'.$mostrar['rafaga'].'</td>';
+        echo '<td>'.$mostrar['rafaga'].' mseg</td>';
         $espera= ($mostrar['rafaga']-$mostrar['rafaga']);
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
       else
       {
@@ -273,7 +273,7 @@ class Planificacion{
         $tempRafaga=$totalRafaga;
         //echo $totalRafaga;
         $retorno[$contador2]=($totalRafaga-$mostrar['llegada']);
-        echo'   <td>'.$retorno[$contador2].'</td>';
+        echo'   <td>'.$retorno[$contador2].' mseg</td>';
 
         $espera= ($retorno[$contador2]-$mostrar['rafaga']);
         $esperaArray[$contador2]=$espera;
@@ -281,7 +281,7 @@ class Planificacion{
         $totalEspera+=$espera;
         $tempEspera=$totalEspera;
         //echo $tempEspera;
-        echo'   <td>'.$espera.'</td>';
+        echo'   <td>'.$espera.' mseg</td>';
       }
         if($TiempoTotal > 0){
         $porcentaje[$contador]=((100/($TiempoTotal))*($mostrar['rafaga']));
@@ -306,8 +306,8 @@ class Planificacion{
         echo '<tr>
                 <td>Promedio</td>
                 <td><td>
-                <td>'.number_format($promedioRafaga,2).'</td>
-                <td>'.number_format($promedioEspera,2).'</td>
+                <td>'.number_format($promedioRafaga,2).' mseg</td>
+                <td>'.number_format($promedioEspera,2).' mseg</td>
               </tr>';
               }
       echo '
